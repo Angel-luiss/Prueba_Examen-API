@@ -26,6 +26,17 @@ router.get('/api/catedraticos/onebyid/:id', catedraticos.getCatedraticoById);
 router.put('/api/catedraticos/update/:id', catedraticos.updateById);
 router.delete('/api/catedraticos/delete/:id', catedraticos.deleteById);
 
+const horarios = require('../controllers/horarios.controllers.js');
+
+//Horarios
+router.post('/api/horarios/create', horarios.create);
+router.get('/api/horarios/all', horarios.retrieveAllHorarios);
+router.get('/api/horarios/onebyid/:id', horarios.getHorarioById);
+router.put('/api/horarios/update/:id', horarios.updateById);
+router.delete('/api/horarios/delete/:id', horarios.deleteById);
+
+
+
 //const controlIngreso = require('../controllers/controlingreso.controller.js');
 
 // Control de Ingreso
